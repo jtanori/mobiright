@@ -1,0 +1,54 @@
+#discovery_bar_icon{
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+    display: inline-block;
+    float: none !important;
+    vertical-align: middle;
+
+    img{
+        height: 100%;
+    }
+}
+
+#discovery_caption_label{
+    float: none !important;
+    margin-left: 0.5em !important;
+    font-size: auto !important;
+}
+
+.discovery_centerbar{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.discovery_captionbar{
+    height: auto !important;
+}
+
+.discovery_mobilebar{
+    height: 3em;
+    bottom: 0;
+}
+
+.cover{
+    height: 100% !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    position: absolute !important;
+}
+
+.discovery_offer_wall{
+    transition: 1s;
+    visibility: hidden;
+    display: block !important;
+}
+
+.discovery_offer_wall.open{
+    transition: 1s;
+    display: block;
+    visibility: visible;
+}

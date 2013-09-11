@@ -1,0 +1,16 @@
+mixin ads(ads)
+	- var a = ads ? ads : []
+	each ad in a
+		- console.log(ad, 'ad')
+		.discovery_offer_list
+			div(data-href=ad.link_url)
+				img.dicsovery_offer_photo(src=ad.img_url)
+				.discovery_offerbody
+					.discovery_offer_name #{ad.offer_name}
+					.discovery_offer_user #{ad.offer_user}
+					div
+						img.discovery_rates_back(src=ad.common_images.rates)
+						.discovery_rates_star(value=ad.rating)
+							img.discovery_stars(src=ad.common_images.stars)
+				img.discovery_install_button(src=ad.common_images.install_button)
+			img.discovery_free_icon(src=ad.common_images_mark_free)
