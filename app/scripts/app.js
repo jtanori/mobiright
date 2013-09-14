@@ -13,39 +13,39 @@ define(['zepto', 'templates/bar', 'aspect', 'iscroll'], function ($, tmpl, aspec
             console.log('adjust');
             //setTimeout(function () {
 
-                var w = $(window).width();
-                var $wall = $('#discovery_offer_wall');
-                var $bar = $('#discovery_caption_bar');
-                var $items = $wall.find('.discovery_offer_list');
+            var w = $(window).width();
+            var $wall = $('#discovery_offer_wall');
+            var $bar = $('#discovery_caption_bar');
+            var $items = $wall.find('.discovery_offer_list');
 
-                //Force height on each list item
-                switch (window.orientation) {
-                case 90:
-                case -90:
-                    $items.height(w * 0.1);
-                    break;
-                default:
-                    $items.height(w * 0.18);
-                    break;
-                }
+            //Force height on each list item
+            switch (window.orientation) {
+            case 90:
+            case -90:
+                $items.height(w * 0.1);
+                break;
+            default:
+                $items.height(w * 0.18);
+                break;
+            }
 
-                var barHeight = $bar.height();
-                var height = $wall.height();
+            var barHeight = $bar.height();
+            var height = $wall.height();
 
-                //Calculate the height of the container
-                if ((height + barHeight) > w) {
-                    height = w - barHeight - 10;
-                }
-                //Displace the container to minus it's height
-                if ($wall.hasClass('open')) {
-                    $wall.css({
-                        top: '-' + height + 'px'
-                    });
-                } else {
-                    $wall.css({
-                        top: 0
-                    });
-                }
+            //Calculate the height of the container
+            if ((height + barHeight) > w) {
+                height = w - barHeight - 10;
+            }
+            //Displace the container to minus it's height
+            if ($wall.hasClass('open')) {
+                $wall.css({
+                    top: '-' + height + 'px'
+                });
+            } else {
+                $wall.css({
+                    top: 0
+                });
+            }
             //}, 0);
 
             var $scroll = $('#discovery_scroll_content');

@@ -7,6 +7,7 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+    'use strict';
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks
