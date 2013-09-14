@@ -1,0 +1,22 @@
+include icon
+
+.discovery_mobilebar#discovery_mobile_bar
+	.discovery_offer_wall#discovery_offer_wall
+		each ad in offers
+			.discovery_offer_list
+				a(href=ad.link_url)
+					img.discovery_offer_photo(src=ad.img_url)
+					.discovery_offerbody
+						.discovery_offer_name #{ad.offer_name}
+						.discovery_offer_user #{ad.offer_user}
+						div
+							img.discovery_rates_back(src=common_images.rates)
+							.discovery_rates_star(value=ad.rating)
+								img.discovery_stars(src=common_images.stars)
+					img.discovery_install_button(src=common_images.install_button)
+				img.discovery_free_icon(src=common_images.mark_free)
+	.discovery_captionbar#discovery_caption_bar
+		.discovery_centerbar
+			div#discovery_bar_icon
+				img#discovery_icon_img(src=host + '/images/bar_icon.png')
+			span#discovery_caption_label #{affiliate.company}
