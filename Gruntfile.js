@@ -1,5 +1,4 @@
 // Generated on 2013-09-14 using generator-webapp 0.4.2
-'use strict';
 
 // # Globbing
 // for performance reasons we're only matching one level down:
@@ -349,7 +348,6 @@ module.exports = function (grunt) {
         },
         bower: {
             options: {
-                //exclude: ['modernizr']
             },
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
@@ -390,7 +388,6 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
-        //'modernizr',
         'copy:dist',
         'rev',
         'usemin'

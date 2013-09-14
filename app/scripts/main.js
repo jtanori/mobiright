@@ -41,20 +41,19 @@ function loadCss(url) {
 //Main initialization block
 require(['zepto', 'domReady', 'app'], function ($, domReady, App) {
     //Halt execution if not in mobile
-    console.log(window.mobirightCapabilities.isMobile, 'is mobile');
     if(window.mobirightCapabilities.isMobile){
-        //TODO: Better sync between domReady, Cordova and Router
         domReady(function () {
             //=================== SETUP
             //TODO: Encapsulate it into the App instead
-            var mobiright_attribute = 'mobiright-affiliate-id';
-            var mobiright_css_attribute = 'mobiright-stylesheet';
+            var mobiright_attribute = 'mbr-aff-id';
+            var mobiright_css_attribute = 'mbr-style';
+            var mobiright_host_attribute = 'mbr-host';
             //Get basics
             var $selfScript = $('[' + mobiright_attribute + ']');
             var id = $selfScript.attr(mobiright_attribute);
 
             //TODO: We can define host in the same tag too
-            var host = "http://pub.mobiright.com";
+            var host = $selfScript.attr(mobiright_host_attribute);
             var css = $selfScript.attr(mobiright_css_attribute).split(',');
             //Load all defined stylesheets
             _.each(css, function(item){ loadCss(item); });

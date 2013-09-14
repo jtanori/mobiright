@@ -31,10 +31,17 @@ buf.push('<div id="discovery_mobile_bar" class="discovery_mobilebar"><div id="di
     for (var $index = 0, $$l = offers.length; $index < $$l; $index++) {
       var ad = offers[$index];
 
+<<<<<<< HEAD
 buf.push('<div class="discovery_offer_list"><a');
 buf.push(attrs({ 'href':(ad.link_url) }, {"href":true}));
 buf.push('><img');
 buf.push(attrs({ 'src':(ad.img_url), "class": ('discovery_offer_photo') }, {"src":true}));
+=======
+buf.push('<div class="discovery_offer_list"><div');
+buf.push(attrs({ 'data-href':(ad.link_url) }, {"data-href":true}));
+buf.push('><img');
+buf.push(attrs({ 'src':(ad.img_url), "class": ('dicsovery_offer_photo') }, {"src":true}));
+>>>>>>> 9e95d2f15d74ae7dda5cb2783100bfd1436a8129
 buf.push('/><div class="discovery_offerbody"><div class="discovery_offer_name">' + escape((interp = ad.offer_name) == null ? '' : interp) + '</div><div class="discovery_offer_user">' + escape((interp = ad.offer_user) == null ? '' : interp) + '</div><div><img');
 buf.push(attrs({ 'src':(common_images.rates), "class": ('discovery_rates_back') }, {"src":true}));
 buf.push('/><div');
@@ -43,7 +50,11 @@ buf.push('><img');
 buf.push(attrs({ 'src':(common_images.stars), "class": ('discovery_stars') }, {"src":true}));
 buf.push('/></div></div></div><img');
 buf.push(attrs({ 'src':(common_images.install_button), "class": ('discovery_install_button') }, {"src":true}));
+<<<<<<< HEAD
 buf.push('/></a><img');
+=======
+buf.push('/></div><img');
+>>>>>>> 9e95d2f15d74ae7dda5cb2783100bfd1436a8129
 buf.push(attrs({ 'src':(common_images.mark_free), "class": ('discovery_free_icon') }, {"src":true}));
 buf.push('/></div>');
     }
@@ -53,10 +64,17 @@ buf.push('/></div>');
     for (var $index in offers) {
       $$l++;      var ad = offers[$index];
 
+<<<<<<< HEAD
 buf.push('<div class="discovery_offer_list"><a');
 buf.push(attrs({ 'href':(ad.link_url) }, {"href":true}));
 buf.push('><img');
 buf.push(attrs({ 'src':(ad.img_url), "class": ('discovery_offer_photo') }, {"src":true}));
+=======
+buf.push('<div class="discovery_offer_list"><div');
+buf.push(attrs({ 'data-href':(ad.link_url) }, {"data-href":true}));
+buf.push('><img');
+buf.push(attrs({ 'src':(ad.img_url), "class": ('dicsovery_offer_photo') }, {"src":true}));
+>>>>>>> 9e95d2f15d74ae7dda5cb2783100bfd1436a8129
 buf.push('/><div class="discovery_offerbody"><div class="discovery_offer_name">' + escape((interp = ad.offer_name) == null ? '' : interp) + '</div><div class="discovery_offer_user">' + escape((interp = ad.offer_user) == null ? '' : interp) + '</div><div><img');
 buf.push(attrs({ 'src':(common_images.rates), "class": ('discovery_rates_back') }, {"src":true}));
 buf.push('/><div');
@@ -65,7 +83,11 @@ buf.push('><img');
 buf.push(attrs({ 'src':(common_images.stars), "class": ('discovery_stars') }, {"src":true}));
 buf.push('/></div></div></div><img');
 buf.push(attrs({ 'src':(common_images.install_button), "class": ('discovery_install_button') }, {"src":true}));
+<<<<<<< HEAD
 buf.push('/></a><img');
+=======
+buf.push('/></div><img');
+>>>>>>> 9e95d2f15d74ae7dda5cb2783100bfd1436a8129
 buf.push(attrs({ 'src':(common_images.mark_free), "class": ('discovery_free_icon') }, {"src":true}));
 buf.push('/></div>');
     }
