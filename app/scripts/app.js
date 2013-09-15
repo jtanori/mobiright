@@ -10,10 +10,10 @@ define(['zepto', 'templates/bar', 'aspect', 'iscroll'], function ($, tmpl, aspec
         var $scroll, scroll;
 
         var adjust = function () {
-            console.log('adjust');
             //setTimeout(function () {
 
             var w = $(window).width();
+            var h = $(window).height();
             var $wall = $('#discovery_offer_wall');
             var $bar = $('#discovery_caption_bar');
             var $items = $wall.find('.discovery_offer_list');
@@ -22,20 +22,22 @@ define(['zepto', 'templates/bar', 'aspect', 'iscroll'], function ($, tmpl, aspec
             switch (window.orientation) {
             case 90:
             case -90:
-                $items.height(w * 0.1);
+                $items.height(w * 0.12);
                 break;
             default:
-                $items.height(w * 0.18);
+                $items.height(w * 0.20);
                 break;
             }
 
             var barHeight = $bar.height();
             var height = $wall.height();
-
+            //console.log('height', height, $items.height());
             //Calculate the height of the container
-            if ((height + barHeight) > w) {
-                height = w - barHeight - 10;
+            if ((height + barHeight) >= h) {
+                height = w - barHeight -5;
             }
+
+            console.log('new height', height, $items.height());
             //Displace the container to minus it's height
             if ($wall.hasClass('open')) {
                 $wall.css({
@@ -109,6 +111,7 @@ define(['zepto', 'templates/bar', 'aspect', 'iscroll'], function ($, tmpl, aspec
             console.log([$content, $content.height()]);
 
             $body.addClass('cover');
+            scroll.refresh();
         }.bind(this);
 
         this.getContent = function () {

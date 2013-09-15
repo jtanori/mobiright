@@ -9,6 +9,7 @@
     "zeptojs": "~0.1.1",
     "aspect.js": "*",
     "iscroll": "~5.0.4",
-    "requirejs-plugins": "~1.0.2"
+    "requirejs-plugins": "~1.0.2",
+    "jquery": "~2.0.3"
   }
 }

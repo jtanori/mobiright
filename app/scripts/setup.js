@@ -1,5 +1,5 @@
 /* global define */
-define(['lodash'], function(_){
+define(['lodash', 'zepto'], function(_, $){
     'use strict';
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
@@ -38,4 +38,14 @@ define(['lodash'], function(_){
     console.log(capabilities, 'capabilities');
     //Capabilities global
     _.extend(window, {mobirightCapabilities: capabilities});
+
+    // Used by dateinput
+    $.fn.clone = function(){
+        var ret = $();
+        this.each(function(){
+            ret.push(this.cloneNode(true))
+        });
+        return ret;
+    };
+
 });

@@ -41,6 +41,7 @@ function loadCss(url) {
 //Main initialization block
 require(['zepto', 'domReady', 'app'], function ($, domReady, App) {
     //Halt execution if not in mobile
+    console.log('test');
     if(window.mobirightCapabilities.isMobile){
         domReady(function () {
             //=================== SETUP
